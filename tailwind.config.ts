@@ -39,6 +39,7 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+          foregroundLight: "hsl(var(--muted-foreground-light))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -72,6 +73,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      dropShadow: {
+        glow: [
+          "0 0px 10px rgba(255, 255, 255, 0.5)",
+          "0 0px 10px rgba(255, 255,255, 0.2)"
+        ]
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

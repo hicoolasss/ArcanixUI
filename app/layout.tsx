@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-
+import NavBar from '@/components/NavBar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -25,10 +25,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex flex-col min-h-screen bg-background ">
+            <NavBar />
             <main className="w-full h-full flex px-4 ">
               {/* <section className="flex-grow mt-6 h-full"> */}
-                {children}
-                {/* </section> */}
+              {children}
+              {/* </section> */}
             </main>
           </div>
         </ThemeProvider>
