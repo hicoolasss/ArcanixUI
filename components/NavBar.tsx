@@ -1,16 +1,13 @@
 'use client';
 import Logo from '@/components/ui/logo';
-import { Outfit } from 'next/font/google';
 import { ModeToggle } from './mode-toggle';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-const outfit = Outfit({
-  subsets: ['latin'],
-});
+
 export default function NavBar() {
   return (
     <header
-      className={`${outfit.className} flex items-center justify-center w-full h-16 fixed top-0 backdrop-blur-sm z-50`}
+      className={' flex items-center justify-center w-full h-16 fixed top-0 backdrop-blur-sm z-50'}
     >
       <nav className="flex items-center justify-between w-3/4 self-center h-16 relative top-0">
         <div className="flex items-center justify-center gap-10">
