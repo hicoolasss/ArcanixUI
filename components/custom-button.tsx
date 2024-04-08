@@ -39,13 +39,10 @@ export interface ButtonProps
 
 const ArcanixButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : motion.button;
+    const Comp = asChild ? Slot : 'button';
 
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
+      <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{
@@ -54,7 +51,9 @@ const ArcanixButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
           mass: 0.75,
           stiffness: 100,
         }}
-      />
+      >
+        <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+      </motion.div>
     );
   }
 );
