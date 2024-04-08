@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 
-export default function Logo({ className }: { className?: string }) {
+export default function Logo({ className, }: { className?: string }) {
   const [isHovered, setIsHovered] = useState(false);
   gsap.registerPlugin(MotionPathPlugin);
   const timeline = gsap.timeline({ repeat: -1 });
