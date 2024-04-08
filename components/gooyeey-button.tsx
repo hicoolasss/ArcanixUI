@@ -27,7 +27,7 @@ export const ButtonGooey = ({ content, className, asChild, ...props }: ButtonPro
 
   const firstBubbleVariants = {
     opened: {
-      translateX: buttonRef.current ? `${buttonRef.current.offsetWidth / 2 + 45}px` : '0px',
+      translateX: buttonRef.current ? `${(buttonRef.current as HTMLElement).offsetWidth / 2 + 45}px` : '0px',
       translateY: '90%',
       transition: {
         type: 'spring',
@@ -44,7 +44,7 @@ export const ButtonGooey = ({ content, className, asChild, ...props }: ButtonPro
 
   const secondBubbleVariants = {
     opened: {
-      translateX: buttonRef.current ? `${-buttonRef.current.offsetWidth / 2 - 45}px` : '0px',
+      translateX: buttonRef.current ? `${-(buttonRef.current as HTMLElement).offsetWidth / 2 - 45}px` : '0px',
       translateY: '90%',
       transition: {
         type: 'spring',
@@ -61,7 +61,7 @@ export const ButtonGooey = ({ content, className, asChild, ...props }: ButtonPro
 
   const thirdBubbleVariants = {
     opened: {
-      translateX: buttonRef.current ? `${-buttonRef.current.offsetWidth / 2 - 45}px` : '0px',
+      translateX: buttonRef.current ? `${-(buttonRef.current as HTMLElement).offsetWidth / 2 - 45}px` : '0px',
       translateY: '-90%',
       transition: {
         type: 'spring',
@@ -78,7 +78,7 @@ export const ButtonGooey = ({ content, className, asChild, ...props }: ButtonPro
 
   const fourthBubbleVariants = {
     opened: {
-      translateX: buttonRef.current ? `${buttonRef.current.offsetWidth / 2 + 45}px` : '0px',
+      translateX: buttonRef.current ? `${(buttonRef.current as HTMLElement).offsetWidth / 2 + 45}px` : '0px',
       translateY: '-90%',
       transition: {
         type: 'spring',
