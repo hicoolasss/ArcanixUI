@@ -28,7 +28,7 @@ export default function RootLayout({
         >
           <div className="relative flex flex-col min-h-screen bg-background ">
             <NavBar />
-            <main className="w-full h-full flex ">
+            <main className="w-full h-full flex flex-col">
               {/* <section className="flex-grow mt-6 h-full"> */}
               {children}
               {/* </section> */}

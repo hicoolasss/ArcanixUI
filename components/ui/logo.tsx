@@ -2,9 +2,10 @@ import * as React from 'react';
 
 export interface LogoProps {
   className?: string;
+  ref?: React.Ref<SVGSVGElement>;
 }
 
-function Logo({ className, ...props }: LogoProps) {
+function Logo({ className, ref, ...props }: LogoProps) {
   return (
     <svg
       width={14}
@@ -13,6 +14,7 @@ function Logo({ className, ...props }: LogoProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      
       {...props}
     >
       <path
